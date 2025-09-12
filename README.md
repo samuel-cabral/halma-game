@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Projeto de Sockets - Jogo Halma
 
-## Getting Started
+**Engenharia de Computação**  
+**Programação Paralela e Distribuída**  
+**2025.2**  
+**Prof. Cidcley T. de Souza (<cidcley@ifce.edu.br>)**
+**Autor: Samuel Cabral Lima**
 
-First, run the development server:
+## Descrição do Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Este projeto tem como objetivo implementar o jogo Halma utilizando Sockets para comunicação entre os tabuleiros, que podem estar em máquinas diferentes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Objetivo do Jogo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+O Halma é um jogo de tabuleiro cujo objetivo principal é mover todas as peças de um canto do tabuleiro para o canto oposto. Cada jogador, na sua vez, pode mover uma peça para um quadrado adjacente vazio ou "saltar" sobre uma ou mais peças do adversário, tanto na horizontal quanto na vertical (e, por vezes, na diagonal), para avançar em direção ao destino. Não há captura de peças no Halma, os saltos são apenas para se aproximar do destino.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Para mais detalhes sobre as regras, consulte:  
 
-## Learn More
+- [Regras do Halma - BrainKing](https://brainking.com/pt/GameRules?tp=34#:~:text=Como%20terminar%20um%20jogo,para%20l%C3%A1%20as%20suas%20pe%C3%A7as.)
+- [Vídeo explicativo - Ludopedia](https://ludopedia.com.br/jogo/halma/videos/208182)
 
-To learn more about Next.js, take a look at the following resources:
+### Funcionalidades Básicas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Controle de turno, com definição de quem inicia a partida
+- Movimentação das peças nos tabuleiros
+- Desistência
+- Chat para comunicação durante toda a partida
+- Indicação de vencedor
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Critérios de Avaliação
 
-## Deploy on Vercel
+- Interface do Jogo - UI (0-10)
+- Implementação de Funcionalidades (0-10)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> **Observação:** Elementos da UI só serão considerados quando suas funcionalidades forem implementadas.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Trabalho Individual**  
+**Data de Entrega:** 08/10  
+Depois disso o trabalho será desconsiderado.
+
+O trabalho deve ser enviado por email (<cidcleyppd@gmail.com>) com o link do Google Drive contendo os códigos fontes compactados em um único arquivo ou o link do GitHub. No assunto do email deve conter o texto “Projeto Sockets”.
+
+#### Observações Importantes
+
+- TODOS os trabalhos só serão aceitos se apresentados pessoalmente pelo aluno na data final de entrega ou, em casos excepcionais, a combinar com o professor.
+- TODOS os trabalhos só serão recebidos por email até às 13h da data de entrega.
+- Não serão aceitos trabalhos enviados de qualquer outra forma.
+- Devem ser entregues TODOS os códigos.
+- Deverá ser entregue, se a linguagem de programação permitir, um código executável (.jar, .exe, etc).
+
+---
+
+# Instruções para rodar o projeto Next.js
+
+Este é um projeto [Next.js](https://nextjs.org) criado com [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Como rodar o projeto
+
+1. Instale as dependências do projeto:
+
+   ```
+   pnpm install
+   ```
+
+   ou, se preferir usar yarn:
+
+   ```
+   yarn install
+   ```
+
+2. Execute o servidor de desenvolvimento:
+
+   ```
+   pnpm run dev
+   ```
+
+   ou
+
+   ```
+   yarn dev
+   ```
+
+3. Abra o navegador e acesse [http://localhost:3000](http://localhost:3000) para visualizar o projeto em execução.
+
+## Outros comandos úteis
+
+- **Build para produção:**
+
+  ```
+  pnpm run build
+  ```
+
+  ou
+
+  ```
+  yarn build
+  ```
+
+- **Rodar o projeto em modo produção (após build):**
+
+  ```
+  pnpm start
+  ```
+
+  ou
+
+  ```
+  yarn start
+  ```
+
+> Certifique-se de que as variáveis de ambiente necessárias estejam configuradas antes de rodar o projeto em produção.
