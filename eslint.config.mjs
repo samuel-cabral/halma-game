@@ -1,54 +1,65 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
+import { FlatCompat } from '@eslint/eslintrc'
+import eslintPluginPrettier from 'eslint-plugin-prettier'
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,
-});
+})
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.extends('next/core-web-vitals', 'next/typescript'),
+  ...compat.extends('prettier'),
   {
+    plugins: {
+      prettier: eslintPluginPrettier,
+    },
     languageOptions: {
       parserOptions: {
-        project: "./tsconfig.json",
+        project: './tsconfig.json',
         tsconfigRootDir: __dirname,
       },
     },
     rules: {
-      // Regras de qualidade de código
-      "no-console": ["warn", { allow: ["warn", "error"] }],
-      "no-debugger": "error",
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'no-debugger': 'error',
 
-      // Regras de formatação e estilo
-      "prefer-const": "error",
-      "no-var": "error",
-      "object-shorthand": "error",
-      "prefer-arrow-callback": "error",
-      "prefer-template": "error",
-      "no-multiple-empty-lines": ["error", { max: 2, maxEOF: 1 }],
-      "eol-last": "error",
-      "comma-dangle": ["error", "always-multiline"],
-      "semi": ["error", "always"],
-      "quotes": ["error", "single", { avoidEscape: true }],
-      "jsx-quotes": ["error", "prefer-double"],
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'object-shorthand': 'error',
+      'prefer-arrow-callback': 'error',
+      'prefer-template': 'error',
+
+      'prettier/prettier': [
+        'error',
+        {
+          semi: false,
+          singleQuote: true,
+          tabWidth: 2,
+          trailingComma: 'es5',
+          printWidth: 80,
+          bracketSpacing: true,
+          arrowParens: 'avoid',
+          endOfLine: 'lf',
+        },
+      ],
     },
   },
   {
     ignores: [
-      "node_modules/**",
-      ".next/**",
-      "out/**",
-      "build/**",
-      "next-env.d.ts",
-      "*.config.js",
-      "*.config.mjs",
-      "*.config.ts",
+      'node_modules/**',
+      '.next/**',
+      'out/**',
+      'build/**',
+      'next-env.d.ts',
+      '*.config.js',
+      '*.config.mjs',
+      '*.config.ts',
     ],
   },
-];
+]
 
-export default eslintConfig;
+export default eslintConfig
