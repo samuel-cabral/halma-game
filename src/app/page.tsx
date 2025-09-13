@@ -11,7 +11,7 @@ import { Gamepad2, Users, Zap, Trophy } from 'lucide-react'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-background-foreground/5">
+    <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
       {/* Header */}
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between px-4">
@@ -49,7 +49,7 @@ export default function Home() {
 
           {/* Features Grid */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <Card className="border-2 transition-all hover:shadow-lg">
+            <Card className="transition-all hover:shadow-lg">
               <CardHeader>
                 <Zap className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Tempo Real</CardTitle>
@@ -60,7 +60,7 @@ export default function Home() {
               </CardHeader>
             </Card>
 
-            <Card className="border-2 transition-all hover:shadow-lg">
+            <Card className="transition-all hover:shadow-lg">
               <CardHeader>
                 <Users className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Multijogador</CardTitle>
@@ -71,7 +71,7 @@ export default function Home() {
               </CardHeader>
             </Card>
 
-            <Card className="border-2 transition-all hover:shadow-lg sm:col-span-2 lg:col-span-1">
+            <Card className="transition-all hover:shadow-lg sm:col-span-2 lg:col-span-1">
               <CardHeader>
                 <Trophy className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Estratégia</CardTitle>
