@@ -14,7 +14,7 @@ Este projeto tem como objetivo implementar o jogo Halma utilizando Sockets para 
 
 O Halma é um jogo de tabuleiro cujo objetivo principal é mover todas as peças de um canto do tabuleiro para o canto oposto. Cada jogador, na sua vez, pode mover uma peça para um quadrado adjacente vazio ou "saltar" sobre uma ou mais peças do adversário, tanto na horizontal quanto na vertical (e, por vezes, na diagonal), para avançar em direção ao destino. Não há captura de peças no Halma, os saltos são apenas para se aproximar do destino.
 
-Para mais detalhes sobre as regras, consulte:  
+Para mais detalhes sobre as regras, consulte:
 
 - [Regras do Halma - BrainKing](https://brainking.com/pt/GameRules?tp=34#:~:text=Como%20terminar%20um%20jogo,para%20l%C3%A1%20as%20suas%20pe%C3%A7as.)
 - [Vídeo explicativo - Ludopedia](https://ludopedia.com.br/jogo/halma/videos/208182)
